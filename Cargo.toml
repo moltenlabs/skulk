@@ -1,0 +1,27 @@
+[package]
+name = "skulk"
+description = "MCP (Model Context Protocol) connection manager - sneaking connections to the outside"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+keywords = ["mcp", "agent", "ai", "llm", "protocol"]
+categories = ["development-tools", "asynchronous"]
+
+[dependencies]
+warhorn = { version = "0.1", path = "../warhorn" }
+
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+async-trait = "0.1"
+uuid = { version = "1", features = ["v4", "serde"] }
+parking_lot = "0.12"
+
+[dev-dependencies]
+tokio-test = "0.4"
+tempfile = { workspace = true }
